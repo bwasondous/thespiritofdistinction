@@ -19,7 +19,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--cream);
+  background: var(--espresso);
   color: var(--espresso);
   font-family: var(--font-body);
   font-weight: 300;
@@ -103,6 +103,8 @@ body {
   font-size: 13px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
+  white-space: nowrap;
+  flex: 1;
   border: none;
   cursor: pointer;
   padding: 1rem 2.5rem;
