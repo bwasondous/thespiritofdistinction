@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bwason Dous — Haitian Kremas</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cinzel:wght@400;500&family=Jost:wght@200;300;400&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursorRing"></div>
+
+<div id="age-gate" role="dialog" aria-modal="true" aria-label="Age verification">
+  <div class="age-gate-inner">
+    <h1 class="age-gate-title">Bwason Dous</h1>
+    <p class="age-gate-subtitle">
+      Crafted spirits are meant to be savored.<br>
+      Please confirm you are of legal drinking age.
+    </p>
+
+    <p class="age-gate-question">Are you 21 years of age or older?</p>
+
+    <div class="age-gate-buttons">
+      <button class="btn-age btn-age-yes" onclick="enterSite()">Yes, I Am</button>
+      <button class="btn-age btn-age-no" onclick="denyEntry()">No, I Am Not</button>
+    </div>
+
+    <p id="age-denied">We're sorry — you must be 21 or older to visit this site.</p>
+
+    <p class="age-gate-legal">
+      By entering this site you agree to our Terms & Conditions.<br>
+      Please drink responsibly. Do not share with minors.<br>
+      © 2026 Bwason Dous — New York, NY
+    </p>
+  </div>
+</div>
+
+<nav id="main-nav" class="scrolled">
+  <button class="mobile-menu-toggle" aria-label="Toggle navigation" onclick="toggleMobileMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="index.html#intro">About</a></li>
+    <li><a href="kremas.html">Kremas</a></li>
+  </ul>
+
+  <a href="index.html" class="nav-logo desktop-logo-only">
+    <img src="images/bwason-dous-logo.png" alt="Bwason Dous Logo">
+  </a>
+
+  <a href="index.html" class="nav-logo mobile-logo-only">
+    <img src="images/bwason-dous-logo.png" alt="Bwason Dous Logo Mobile">
+  </a>
+
+  <a href="concierge.html" class="nav-reserve">Concierge</a>
+
+  <div class="mobile-menu-drawer" id="mobileDrawer">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" onclick="toggleMobileMenu()">Home</a></li>
+      <li><a href="kremas.html" onclick="toggleMobileMenu()">Kremas</a></li>
+      <li><a href="concierge.html" onclick="toggleMobileMenu()">Concierge</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-image-focus">
+    <img src="images/bwason-dous-image-01.png" alt="a man holding kremas">
+  </div>
+  
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Haitian Craft Spirits</p>
+    <h1 class="hero-title">
+      The Spirit of Distinction
+    </h1>
+    <br>
+    <p class="hero-tagline">Kremas — Coming Soon</p>
+  </div>
+</section>
+
+<section id="intro">
+  <div class="intro-inner">
+    <div class="intro-image-wrap reveal">
+      <div class="intro-accent-line"></div>
+      <img src="images/crest.png" alt="Bwason Dous Crest" class="intro-featured-image">
+    </div>
+
+    <div class="reveal" style="transition-delay: 0.15s;">
+      <p class="intro-eyebrow">Our Story</p>
+      <h2 class="intro-heading">
+        Born From The Warmth<br>
+        of Haitian Tradition
+      </h2>
+      <p class="intro-body">
+        Bwason Dous — meaning "sweet drinks" in Haitian Creole, merges deep Caribbean traditions with contemporary innovation. The focus has always been centered on producing premium, soulful beverages crafted specifically for the most discerning palates.
+      </p>
+      <p class="intro-body">
+        We are introducing Kremas, our flagship offering, to the world on our terms—safeguarded by our family crest, which serves as the very insignia of our company. It's a new kind of drinking experience. From its texture to its flavor, Kremas introduces a fresh perspective: elegant, unexpected, and entirely its own. This isn’t a reinvention of Kremas, it's an official arrival.
+      </p>
+        <p class="intro-body">
+        This artisanal beverage has graced Haitian tables since our country’s independence in 1804, carried through generations as a symbol of celebration and resilience. We do not claim its origin—only the honor of having perfected its taste. Kremas by Bwason Dous is the most well-balanced, and premium Kremas ever produced. What we offer is a smooth, graceful expression of Kremas, crafted with care and presented in its most polished form — finally brought to the world by The St. Vilûs & Louis Family.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+
+    <!-- TOP ROW -->
+    <div class="footer-top">
+
+      <div class="footer-meta">
+        <p>Bwason Dous © 2026</p>
+        <p>New York, NY</p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="index.html#intro">About</a></li>
+        <li><a href="kremas.html">Kremas</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+
+      <!-- Desktop only logo -->
+      <div class="logo desktop-footer-logo">
+        Bwason Dous<span class="tm-logo">™</span>
+      </div>
+
+      <div class="footer-newsletter">
+        <h3 class="newsletter-title">Subscribe to Our Newsletter</h3>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+          <input type="email" placeholder="YOUR EMAIL ADDRESS" required class="newsletter-input">
+          <button type="submit" class="newsletter-submit" aria-label="Submit Subscription">Subscribe</button>        </form>
+      </div>
+
+    </div>
+
+    <!-- Mobile only logo -->
+    <div class="footer-bottom">
+      <div class="logo">
+        Bwason Dous<span class="tm-logo">™</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

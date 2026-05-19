@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kremas — Bwason Dous</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cinzel:wght@400;500&family=Jost:wght@200;300;400&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<body class="kremas-page">
+
+<div id="cursor"></div>
+<div id="cursorRing"></div>
+
+<nav id="main-nav" class="scrolled">
+  <button class="mobile-menu-toggle" aria-label="Toggle navigation" onclick="toggleMobileMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="index.html#intro">About</a></li>
+    <li><a href="kremas.html">Kremas</a></li>
+  </ul>
+
+  <a href="index.html" class="nav-logo desktop-logo-only">
+    <img src="images/bwason-dous-logo.png" alt="Bwason Dous Logo">
+  </a>
+
+  <a href="index.html" class="nav-logo mobile-logo-only">
+    <img src="images/bwason-dous-logo.png" alt="Bwason Dous Logo Mobile">
+  </a>
+
+  <a href="concierge.html" class="nav-reserve">Concierge</a>
+
+  <div class="mobile-menu-drawer" id="mobileDrawer">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" onclick="toggleMobileMenu()">Home</a></li>
+      <li><a href="kremas.html" onclick="toggleMobileMenu()">Kremas</a></li>
+      <li><a href="concierge.html" onclick="toggleMobileMenu()">Concierge</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="kremas">
+  <div class="kremas-inner">
+    <div class="kremas-header">
+      <span class="kremas-title">Introducing</span>
+      <span class="kremas-coming">Coming Soon — 2026</span>
+    </div>
+    <h2 class="kremas-hero-text reveal">
+      Kremas. Haiti's most beloved spirit, finally bottled for the world.
+    </h2>
+    <div class="kremas-grid">
+      <div class="kremas-card reveal">
+        <div class="kremas-card-num">01</div>
+        <p class="kremas-card-title">Coconut &amp; Cream</p>
+        <p class="kremas-card-body">A foundation of coconut cream lends Kremas its signature richness — smooth and indulgent.</p>
+      </div>
+      <div class="kremas-card reveal" style="transition-delay:0.1s;">
+        <div class="kremas-card-num">02</div>
+        <p class="kremas-card-title">Warm Spice</p>
+        <p class="kremas-card-body">Cinnamon, nutmeg, and star anise weave through every pour — a spice profile perfected.</p>
+      </div>
+      <div class="kremas-card reveal" style="transition-delay:0.2s;">
+        <div class="kremas-card-num">03</div>
+        <p class="kremas-card-title">Rum Soul</p>
+        <p class="kremas-card-body">Aged rum forms the spirit's backbone — robust enough to carry the flavors, refined enough to let them shine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="details">
+  <div class="details-inner">
+    <div class="details-visual reveal">
+     <svg class="bottle-silhouette" viewBox="0 0 240 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M105 20 L135 20 L140 60 C140 100 180 130 180 190 L180 350 C180 375 120 375 60 350 L60 190 C60 130 100 100 100 60 Z" 
+        stroke="#B8924A" 
+        stroke-width="1.5" 
+        fill="rgba(184,146,74,0.05)"/>
+  
+  <path d="M105 20 L135 20 L138 50 L102 50 Z" fill="#B8924A" opacity="0.6"/>
+  
+  <text x="120" y="210" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="12" fill="#B8924A" font-style="italic">Bwason</text>
+  <text x="120" y="228" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="12" fill="#B8924A" font-style="italic">Dous</text>
+  <text x="120" y="248" text-anchor="middle" font-family="'Cinzel', serif" font-size="7" fill="#B8924A" letter-spacing="3">KREMAS</text>
+  
+  <ellipse cx="120" cy="370" rx="60" ry="10" fill="rgba(184,146,74,0.1)"/>
+</svg>
+    </div>
+    <div class="details-content reveal" style="transition-delay:0.15s;">
+      <p class="section-eyebrow">The Bottle</p>
+      <table class="details-table">
+        <tr><td>Origin</td><td>Haiti</td></tr>
+        <tr><td>Base Spirit</td><td>Aged Rum</td></tr>
+        <tr><td>Character</td><td>Coconut, Cinnamon &amp; Nutmeg</td></tr>
+        <tr><td>ABV</td><td>17%</td></tr>
+        <tr><td>Format</td><td>750 ml</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="reserve">
+  <h2 class="reserve-eyebrow reveal">Limited First Release</h2>
+  <h2 class="reserve-title reveal" style="transition-delay:0.1s;">
+    Be one of the first to bring<br>Kremas to your establishment
+  </h2>
+  <p class="reserve-sub reveal" style="transition-delay:0.15s;">
+    Join the newsletter to become a part of the Bwason Dous story. We’ll notify you the moment our first batch is ready for release. You will also be able to discover new additions to our portfolio of unique beverages, and invitations to our private events.
+</section>
+
+<footer>
+  <div class="footer-inner">
+
+    <!-- TOP ROW -->
+    <div class="footer-top">
+
+      <div class="footer-meta">
+        <p>Bwason Dous © 2026</p>
+        <p>New York, NY</p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="index.html#intro">About</a></li>
+        <li><a href="kremas.html">Kremas</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+
+      <!-- Desktop only logo -->
+      <div class="logo desktop-footer-logo">
+        Bwason Dous<span class="tm-logo">™</span>
+      </div>
+
+      <div class="footer-newsletter">
+        <h3 class="newsletter-title">Subscribe to Our Newsletter</h3>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+          <input type="email" placeholder="YOUR EMAIL ADDRESS" required class="newsletter-input">
+          <button type="submit" class="newsletter-submit" aria-label="Submit Subscription">Subscribe</button>        </form>
+      </div>
+
+    </div>
+
+    <!-- Mobile only logo -->
+    <div class="footer-bottom">
+      <div class="logo">
+        Bwason Dous<span class="tm-logo">™</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
