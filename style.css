@@ -198,6 +198,10 @@ nav.scrolled {
   text-decoration: none;
 }
 
+.nav-logo img {
+  filter: brightness(0) invert(1);
+}
+
 /* Forces the right-side reserve button to stick to the far right of its grid track */
 .nav-reserve {
   justify-self: flex-end;
