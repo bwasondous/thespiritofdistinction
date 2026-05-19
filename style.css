@@ -489,7 +489,26 @@ section { position: relative; }
 /* ── KREMAS FEATURE ── */
 #kremas {
   background: var(--cream-dark);
-  padding: 16rem 0;
+  padding: 8rem 0 16rem;
+}
+
+@media (min-width: 769px) {
+  #kremas {
+    padding: 14rem 0 16rem;
+  }
+}
+
+/* ── KREMAS FEATURE IMAGE ── */
+.kremas-feature-image {
+  padding: 6rem 0 0rem;
+}
+
+.kremas-feature-image img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .kremas-inner {
