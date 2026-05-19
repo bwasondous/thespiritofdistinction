@@ -95,7 +95,7 @@ body {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .btn-age {
@@ -254,7 +254,7 @@ nav.scrolled {
 
 .hero-eyebrow {
   font-family: var(--font-display);
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.4em;
   color: var(--gold);
   text-transform: uppercase;
@@ -274,7 +274,7 @@ nav.scrolled {
 
 .hero-tagline {
   font-family: var(--font-display);
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.35em;
   color: var(--sand);
   text-transform: uppercase;
@@ -416,7 +416,7 @@ section { position: relative; }
 
 .intro-eyebrow {
   font-family: var(--font-display);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.35em;
   color: var(--gold);
   text-transform: uppercase;
@@ -1432,6 +1432,16 @@ background-color: var(--cream);
     display: none !important; /* Hides desktop custom hardware-accelerated cursor */
   }
 
+.age-gate-legal {
+    font-size: 9px;
+    letter-spacing: 0.04em;
+  }
+
+/* ── HERO TITLE MOBILE ── */
+  .hero-title {
+    font-size: clamp(3.0rem, 4vw, 3.25rem);
+  }
+
   /* ── NAV STRUCTURAL COLLAPSE ── */
   nav {
     height: 80px;
@@ -1554,6 +1564,7 @@ background-color: var(--cream);
     grid-column: 1 / -1;
     justify-self: center;
     max-width: 100%;
+    padding-top: 2rem;
   }
 
   .newsletter-title {
