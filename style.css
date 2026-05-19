@@ -1441,7 +1441,7 @@ background-color: var(--cream);
 
 /* ── HERO TITLE MOBILE ── */
   .hero-title {
-    font-size: clamp(3.0rem, 4vw, 3.25rem);
+    font-size: clamp(2.5rem, 4vw, 3.25rem);
   }
 
   /* ── NAV STRUCTURAL COLLAPSE ── */
