@@ -1231,6 +1231,7 @@ background-color: var(--cream);
 /* ── BODY ── */
 .concierge-body {
   text-align: center;
+  padding-top: 1rem;
 }
 
 .concierge-intro {
@@ -1461,6 +1462,10 @@ background-color: var(--cream);
 
   .nav-logo img {
     height: 85px;
+  }
+
+.concierge-main {
+    padding: 0 3.0rem 3rem;
   }
 
   /* ── INTRO SECTION ── */
