@@ -1924,9 +1924,9 @@ background-color: var(--cream);
   }
  
   .welcome-headline {
-    font-size: clamp(1.5rem, 5.5vw, 2rem);  }
+    font-size: clamp(2rem, 5.5vw, 2.5rem);  }
  
   .welcome-subtext {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
