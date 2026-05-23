@@ -1924,10 +1924,10 @@ background-color: var(--cream);
   }
  
   .welcome-headline {
-    font-size: clamp(0.9rem, 5.5vw, 1.3rem);
+    font-size: clamp(1.2rem, 5.5vw, 1.5rem);
   }
  
   .welcome-subtext {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
