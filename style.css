@@ -1765,21 +1765,21 @@ background-color: var(--cream);
   align-items: center;
   justify-content: center;
 }
- 
+
 .welcome-hero-image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
 }
- 
+
 .welcome-hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
 }
- 
+
 .welcome-hero-overlay {
   position: absolute;
   inset: 0;
@@ -1791,7 +1791,7 @@ background-color: var(--cream);
   );
   z-index: 2;
 }
- 
+
 .welcome-hero-content {
   position: relative;
   z-index: 3;
@@ -1800,7 +1800,7 @@ background-color: var(--cream);
   max-width: 760px;
   width: 100%;
 }
- 
+
 .welcome-eyebrow {
   font-family: var(--font-display);
   font-size: 11px;
@@ -1812,22 +1812,21 @@ background-color: var(--cream);
   transform: translateY(16px);
   animation: fadeUp 0.9s ease forwards 0.3s;
 }
- 
+
 .welcome-headline {
   font-family: var(--font-serif);
-  font-size: clamp(1.4rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 6vw, 5rem);
   font-weight: 300;
   font-style: italic;
   color: var(--cream);
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: 0.02em;
   margin-bottom: 1.8rem;
-  white-space: nowrap;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 1s ease forwards 0.5s;
 }
- 
+
 .welcome-rule {
   width: 48px;
   height: 1px;
@@ -1836,10 +1835,10 @@ background-color: var(--cream);
   opacity: 0;
   animation: fadeIn 0.8s ease forwards 0.75s;
 }
- 
+
 .welcome-subtext {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 200;
   letter-spacing: 0.06em;
   color: rgba(245, 240, 232, 0.75);
@@ -1849,7 +1848,7 @@ background-color: var(--cream);
   transform: translateY(14px);
   animation: fadeUp 0.9s ease forwards 0.85s;
 }
- 
+
 .welcome-actions {
   display: flex;
   gap: 1rem;
@@ -1859,7 +1858,7 @@ background-color: var(--cream);
   transform: translateY(14px);
   animation: fadeUp 0.9s ease forwards 1.05s;
 }
- 
+
 .welcome-btn-primary {
   display: inline-block;
   font-family: var(--font-display);
@@ -1877,7 +1876,7 @@ background-color: var(--cream);
 .welcome-btn-primary:hover {
   background: var(--gold-light);
 }
- 
+
 /* ── ANIMATIONS ── */
 @keyframes fadeUp {
   to {
@@ -1888,27 +1887,27 @@ background-color: var(--cream);
 @keyframes fadeIn {
   to { opacity: 1; }
 }
- 
+
 /* ── MOBILE ── */
 @media (max-width: 768px) {
   .welcome-hero-content {
     padding: 120px 1.5rem 6rem;
   }
- 
+
   .welcome-headline {
-    font-size: clamp(3rem, 6vw, 1.6rem);
+    font-size: clamp(2.2rem, 9vw, 3rem);
   }
- 
+
   .welcome-subtext {
-    font-size: 16px;
+    font-size: 15px;
     letter-spacing: 0.04em;
   }
- 
+
   .welcome-actions {
     flex-direction: column;
     align-items: center;
   }
- 
+
   .welcome-btn-primary {
     width: 100%;
     max-width: 280px;
@@ -1917,17 +1916,17 @@ background-color: var(--cream);
     margin: 0 auto;
   }
 }
- 
+
 @media (max-width: 480px) {
   .welcome-hero-content {
     padding: 110px 1.25rem 5rem;
   }
- 
+
   .welcome-headline {
-    font-size: clamp(0.9rem, 5.5vw, 1.3rem);
+    font-size: clamp(2rem, 8vw, 2.8rem);
   }
- 
+
   .welcome-subtext {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
