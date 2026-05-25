@@ -1796,9 +1796,11 @@ background-color: var(--cream);
   position: relative;
   z-index: 3;
   text-align: center;
-  padding: 160px 2rem 8rem;
-  max-width: 760px;
+  padding: 160px 3rem 8rem;
+  max-width: 780px;
   width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
  
 .welcome-eyebrow {
@@ -1815,14 +1817,16 @@ background-color: var(--cream);
  
 .welcome-headline {
   font-family: var(--font-serif);
-  font-size: clamp(1.4rem, 5vw, 3.5rem);
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
   font-weight: 300;
   font-style: italic;
+  text-align: center;
   color: var(--cream);
-  line-height: 1.1;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 1.8rem;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 1s ease forwards 0.5s;
@@ -1892,11 +1896,11 @@ background-color: var(--cream);
 /* ── MOBILE ── */
 @media (max-width: 768px) {
   .welcome-hero-content {
-    padding: 120px 1.5rem 6rem;
+    padding: 120px 2rem 6rem;
   }
  
   .welcome-headline {
-    font-size: clamp(3rem, 6vw, 1.6rem);
+    font-size: clamp(1.6rem, 6vw, 2.8rem);
   }
  
   .welcome-subtext {
@@ -1922,7 +1926,7 @@ background-color: var(--cream);
  
 @media (max-width: 480px) {
   .welcome-hero-content {
-    padding: 110px 1.25rem 5rem;
+    padding: 110px 1.5rem 5rem;
   }
  
   .welcome-headline {
