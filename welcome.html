@@ -68,7 +68,6 @@
   </div>
 </nav>
 
-<!-- HERO — same image as index.html -->
 <section class="welcome-hero">
   <div class="welcome-hero-image">
     <img src="images/bwason-dous-image-01.png" alt="A man holding Kremas">
@@ -79,16 +78,14 @@
     <h1 class="welcome-headline">Welcome to Bwason Dous</h1>
     <div class="welcome-rule"></div>
     <p class="welcome-subtext">
-      We have perfected something exceptional. A creamy liqueur you have never heard, but that has been in existence since 1804. Kremas by Bwason Dous is the most well-balanced, and premium Kremas ever crafted. Made with care and presented in its most polished form. 
-      <br/>
-      <br/>
-      Flawless in texture. Rich in body. Beautiful in taste.
-      <br/>
-      <br/>
-      Subscribe to our newsletter. You’ll receive updates when and where Kremas becomes available for purchase.
+      Kremas is a creamy liqueur rooted in Haitian tradition since 1804. Bwason Dous has spent years refining it — crafting a version worthy of the world beyond.
+      <br/><br/>
+      This fall, it finally arrives. Creamy in texture. Full in body. Beautiful on the palate.
+      <br/><br/>
+      Join our newsletter and be the first to know when Kremas is available near you.
     </p>
     <div class="welcome-actions">
-      <a href="/" class="welcome-btn-primary">Discover The Brand</a>
+      <a href="/?redirect=kremas" class="welcome-btn-primary">Discover Kremas</a>
     </div>
   </div>
 </section>
@@ -109,14 +106,13 @@
         <li><a href="/privacy-policy">Privacy Policy</a></li>
       </ul>
 
-      <!-- Desktop only logo -->
       <div class="logo desktop-footer-logo">
         Bwason Dous<span class="tm-logo">™</span>
       </div>
 
       <div class="footer-newsletter">
         <h3 class="newsletter-title">Subscribe to Our Newsletter</h3>
-        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+        <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
           <input type="email" placeholder="YOUR EMAIL ADDRESS" required class="newsletter-input">
           <button type="submit" class="newsletter-submit" aria-label="Submit Subscription">Subscribe</button>
         </form>
@@ -124,7 +120,6 @@
 
     </div>
 
-    <!-- Mobile only logo -->
     <div class="footer-bottom">
       <div class="logo">
         Bwason Dous<span class="tm-logo">™</span>
