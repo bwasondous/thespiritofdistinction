@@ -1347,7 +1347,7 @@ background-color: var(--cream);
 }
 
 .concierge-input::placeholder {
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.329);
   font-family: 'Cinzel', serif;
   font-size: 12px;
 }
@@ -1368,7 +1368,7 @@ background-color: var(--cream);
   border: 1px solid rgba(184, 146, 74, 0.5) !important;
   color: #B8924A !important;
   font-family: 'Cinzel', serif;
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   padding: 0.9rem 2.5rem;
