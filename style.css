@@ -1616,7 +1616,7 @@ background-color: var(--cream);
 @media (max-width: 480px) {
   /* ── FINE-TUNED TYPOGRAPHY SCALING FOR SMALL SCREENS ── */
   .hero-tagline {
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.25em;
   }
 
