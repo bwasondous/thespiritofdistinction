@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>Welcome — Bwason Dous</title>
+  <meta name="description" content="Welcome to Bwason Dous — Premium Haitian Kremas crafted for the most discerning palates. New York, NY.">
+
+  <!-- SEO -->
+  <meta name="keywords" content="Haitian Kremas, Kremas, Haitian spirits, Caribbean spirits, Bwason Dous, premium Kremas, Haitian liqueur">
+  <meta name="author" content="Bwason Dous">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bwasondous.com/welcome">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Welcome — Bwason Dous">
+  <meta property="og:description" content="Premium Haitian Kremas crafted for the most discerning palates. New York, NY.">
+  <meta property="og:image" content="https://bwasondous.com/images/crest.png">
+  <meta property="og:url" content="https://bwasondous.com/welcome">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Welcome — Bwason Dous">
+  <meta name="twitter:description" content="Premium Haitian Kremas crafted for the most discerning palates.">
+  <meta name="twitter:image" content="https://bwasondous.com/images/crest.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cinzel:wght@400;500&family=Jost:wght@200;300;400&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursorRing"></div>
+
+<nav id="main-nav" class="scrolled">
+  <button class="mobile-menu-toggle" aria-label="Toggle navigation" onclick="toggleMobileMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="/#intro">About</a></li>
+    <li><a href="/kremas">Kremas</a></li>
+  </ul>
+
+  <a href="/" class="nav-logo desktop-logo-only">
+    <img src="images/bwason-dous-logo.png" alt="Bwason Dous Logo">
+  </a>
+
+  <a href="/" class="nav-logo mobile-logo-only">
+    <img src="images/bwason-dous-logo.png" alt="Bwason Dous Logo Mobile">
+  </a>
+
+  <a href="/concierge" class="nav-reserve">Concierge</a>
+
+  <div class="mobile-menu-drawer" id="mobileDrawer">
+    <ul class="mobile-nav-links">
+      <li><a href="/" onclick="toggleMobileMenu()">Home</a></li>
+      <li><a href="/kremas" onclick="toggleMobileMenu()">Kremas</a></li>
+      <li><a href="/concierge" onclick="toggleMobileMenu()">Concierge</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="welcome-hero">
+  <div class="welcome-hero-image">
+    <img src="images/woman-drinking-kremas.png" alt="A Beautiful Woman Drinking Kremas">
+  </div>
+  <div class="welcome-hero-overlay"></div>
+  <div class="welcome-hero-content">
+    <p class="welcome-eyebrow">Haitian Craft Spirits</p>
+    <h1 class="welcome-headline">Forget about the Grocery Store. 
+      <br/> 
+      Discover the Spirit.</h1>
+    <div class="welcome-rule"></div>
+    <p class="welcome-subtext">
+      Kremas is a creamy liqueur rooted in Haitian tradition since 1804. Bwason Dous has spent time refining it—crafting a version suitable for the commercial market.
+      <br/><br/>
+      This fall, it finally arrives. Creamy in texture. Full in body. Beautiful in taste.
+      <br/><br/>
+      Join our newsletter and be the first to know when Kremas becomes available in a restaurant, bar, or club near you.
+    </p>
+    <div class="welcome-actions">
+      <a href="/kremas" class="welcome-btn-primary">Discover Kremas</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-top">
+
+      <div class="footer-meta">
+        <p>Bwason Dous © 2026</p>
+        <p>New York, NY</p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="/#intro">About</a></li>
+        <li><a href="/kremas">Kremas</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+      </ul>
+
+      <div class="logo desktop-footer-logo">
+        Bwason Dous<span class="tm-logo">™</span>
+      </div>
+
+      <div class="footer-newsletter">
+        <h3 class="newsletter-title">Subscribe to Our Newsletter</h3>
+        <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+          <input type="email" placeholder="YOUR EMAIL ADDRESS" required class="newsletter-input">
+          <button type="submit" class="newsletter-submit" aria-label="Submit Subscription">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="logo">
+        Bwason Dous<span class="tm-logo">™</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
