@@ -1656,7 +1656,8 @@ background-color: var(--cream);
     justify-content: space-between;
     align-items: center;
     padding: 0 1.5rem !important;
-    height: 90px !important; /* Provides optimal breathing room for the expanded logo layout */
+    padding-top: 12px !important;
+    height: 120px !important; /* Provides optimal breathing room for the expanded logo layout */
     position: fixed;
     width: 100%;
     top: 0;
