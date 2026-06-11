@@ -917,7 +917,7 @@ footer {
   width: auto;
   display: block;
   /* This filter turns the black logo into a gold/cream color */
-  filter: brightness(0) invert(1) sepia(0.5) saturate(2);
+  filter: brightness(0) invert(1);
 }
 
 /* ── INTRO IMAGE STYLING ── */
