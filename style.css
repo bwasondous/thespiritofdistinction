@@ -913,7 +913,7 @@ footer {
 
 /* --- LOGO FIX --- */
 .nav-logo img {
-  height: 150px; /* Adjust this to fit your nav bar */
+  height: 128px; /* Reduced 15% from 150px */
   width: auto;
   display: block;
   /* This filter turns the black logo into a gold/cream color */
@@ -1440,7 +1440,7 @@ background-color: var(--cream);
   }
   
   .nav-logo img {
-    height: 100px; /* Scales down the central brand asset */
+    height: 85px; /* Reduced 15% from 100px */
   }
 
   .nav-reserve {
@@ -1491,7 +1491,7 @@ background-color: var(--cream);
   }
 
   .nav-logo img {
-    height: 85px;
+    height: 72px; /* Reduced 15% from 85px */
   }
 
 .concierge-main {
@@ -1674,7 +1674,7 @@ background-color: var(--cream);
   }
 
   .mobile-logo-only img {
-    height: 125px !important; /* Exactly doubled from your original mobile template constraints to stand out elegantly */
+    height: 106px !important; /* Reduced 15% from 125px */
     width: auto;
     display: block;
   }
