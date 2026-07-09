@@ -913,7 +913,7 @@ footer {
 
 /* --- LOGO FIX --- */
 .nav-logo img {
-  height: 100px; /* Reduced 15% from 150px */
+  height: 115px; /* Reduced 15% from 150px */
   width: auto;
   display: block;
   /* This filter turns the black logo into a gold/cream color */
@@ -1674,7 +1674,7 @@ background-color: var(--cream);
   }
 
   .mobile-logo-only img {
-    height: 95px !important; /* Reduced 15% from 125px */
+    height: 105px !important; /* Reduced 15% from 125px */
     width: auto;
     display: block;
   }
