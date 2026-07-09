@@ -199,7 +199,7 @@ nav.scrolled {
 }
 
 .nav-logo img {
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1) contrast(1.4);
 }
 
 /* Forces the right-side reserve button to stick to the far right of its grid track */
@@ -917,7 +917,7 @@ footer {
   width: auto;
   display: block;
   /* This filter turns the black logo into a gold/cream color */
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1) contrast(1.4);
 }
 
 /* ── INTRO IMAGE STYLING ── */
