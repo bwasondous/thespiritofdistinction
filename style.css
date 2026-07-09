@@ -1470,6 +1470,10 @@ background-color: var(--cream);
     letter-spacing: 0.04em;
   }
 
+  .age-gate-subtitle {
+    font-size: 13px;
+  }
+
 /* ── HERO TITLE MOBILE ── */
   .hero-title {
     font-size: clamp(2.5rem, 4vw, 3.25rem);
