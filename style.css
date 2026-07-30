@@ -1941,3 +1941,225 @@ background-color: var(--cream);
     font-size: 15px;
   }
 }
+/* ==========================================================================
+   TERMS OF USE PAGE
+   ========================================================================== */
+
+.terms-page {
+  background: var(--espresso);
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-weight: 300;
+}
+
+/* ── HEADER HERO AREA ── */
+.terms-main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 2.5rem 8rem;
+}
+
+.terms-header {
+  padding: 180px 0 4rem;
+  text-align: center;
+}
+
+.terms-eyebrow {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+.terms-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 300;
+  font-style: italic;
+  color: #FFFFFF;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.terms-effective {
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+}
+
+/* ── INTRO BLOCK ── */
+.terms-intro {
+  padding: 0 0 1rem;
+}
+
+.terms-intro p {
+  font-size: 15px;
+  line-height: 1.95;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.2rem;
+}
+
+.terms-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.terms-intro strong {
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 400;
+}
+
+/* ── BODY CONTENT ── */
+.terms-body {
+  padding-top: 1rem;
+}
+
+/* ── SECTION ── */
+.term-section {
+  margin-bottom: 0;
+  padding: 1.6rem 0 1.8rem;
+  border-top: 1px solid rgba(184, 146, 74, 0.15);
+}
+
+.term-section:first-child {
+  border-top: none;
+}
+
+.term-section-title {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 1.2rem;
+}
+
+.term-section p {
+  font-size: 15px;
+  line-height: 1.95;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.2rem;
+}
+
+.term-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── LIST ── */
+.term-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  border-left: 1px solid rgba(184, 146, 74, 0.3);
+  padding-left: 1.8rem;
+}
+
+.term-list li {
+  font-size: 15px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.8rem;
+  font-weight: 300;
+}
+
+.term-list li:last-child {
+  margin-bottom: 0;
+}
+
+.term-label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-right: 0.6rem;
+}
+
+/* ── INLINE EMPHASIS ── */
+.term-em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ── CONTACT BLOCK ── */
+.term-contact-block {
+  margin-top: 1.8rem;
+  padding: 2rem 2.5rem;
+  border: 1px solid rgba(184, 146, 74, 0.2);
+  display: inline-block;
+}
+
+.term-contact-name {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.term-contact-block p {
+  margin-bottom: 0.3rem;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.term-link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(184, 146, 74, 0.3);
+  padding-bottom: 1px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.term-link:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* ── LEGAL NOTE ── */
+.terms-legal-note {
+  margin-top: 2.5rem;
+  font-size: 12px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+/* ── NAV OVERRIDE for espresso background ── */
+.terms-page #main-nav {
+  background: linear-gradient(to bottom,
+    rgba(26, 17, 8, 0.98) 0%,
+    rgba(26, 17, 8, 0.7) 60%,
+    transparent 100%);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+  .terms-header {
+    padding: 140px 0 3rem;
+  }
+  .term-contact-block {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .term-contact-block {
+    padding: 1.5rem;
+    width: 100%;
+  }
+}
