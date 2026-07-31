@@ -223,6 +223,19 @@ nav.scrolled {
   border-color: var(--gold);
 }
 
+/* Krem page only — cream background makes the gold button hard to read,
+   so this page gets a white-outline version instead */
+.krem-page .nav-reserve {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.krem-page .nav-reserve:hover {
+  background: #FFFFFF;
+  color: #000000;
+  border-color: #FFFFFF;
+}
+
 /* ── HERO ── */
 #hero {
   height: 100vh;
