@@ -46,7 +46,7 @@
 
   <ul class="nav-links">
     <li><a href="/#intro">About</a></li>
-    <li><a href="/kremas">Kremas</a></li>
+    <li><a href="/krem">Krem</a></li>
   </ul>
 
   <a href="/" class="nav-logo desktop-logo-only">
@@ -57,13 +57,13 @@
     <img src="images/bwason-dous-logo.png" alt="Bwason Dous Logo Mobile">
   </a>
 
-  <a href="/concierge" class="nav-reserve">Concierge</a>
+  <a href="/store-locator" class="nav-reserve">Store Locator</a>
 
   <div class="mobile-menu-drawer" id="mobileDrawer">
     <ul class="mobile-nav-links">
       <li><a href="/" onclick="toggleMobileMenu()">Home</a></li>
-      <li><a href="/kremas" onclick="toggleMobileMenu()">Kremas</a></li>
-      <li><a href="/concierge" onclick="toggleMobileMenu()">Concierge</a></li>
+      <li><a href="/krem" onclick="toggleMobileMenu()">Krem</a></li>
+      <li><a href="/store-locator" onclick="toggleMobileMenu()">Store Locator</a></li>
     </ul>
   </div>
 </nav>
@@ -180,38 +180,67 @@
 <footer>
   <div class="footer-inner">
 
-    <!-- TOP ROW -->
     <div class="footer-top">
 
-      <div class="footer-meta">
-        <p>Bwason Dous © 2026</p>
-        <p>New York, NY</p>
+      <div class="footer-brand">
+        <div class="logo desktop-footer-logo">
+          Bwason Dous<span class="tm-logo">™</span>
+        </div>
+
+        <div class="footer-action-group">
+          <a href="/newsletter" class="footer-action-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="5" width="18" height="14" rx="1"></rect>
+              <path d="M3 6l9 7 9-7"></path>
+            </svg>
+            Newsletter
+          </a>
+          <a href="/concierge" class="footer-action-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 19v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path>
+              <circle cx="10" cy="7" r="3"></circle>
+              <path d="M16 3.5a3 3 0 0 1 0 7"></path>
+            </svg>
+            Concierge
+          </a>
+        </div>
       </div>
 
-      <ul class="footer-links">
-        <li><a href="/#intro">About</a></li>
-        <li><a href="/kremas">Kremas</a></li>
-        <li><a href="/privacy.html">Privacy Policy</a></li>
-      </ul>
-
-      <!-- Desktop only logo -->
-      <div class="logo desktop-footer-logo">
-        Bwason Dous<span class="tm-logo">™</span>
-      </div>
-
-      <div class="footer-newsletter">
-        <h3 class="newsletter-title">Subscribe to Our Newsletter</h3>
-        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
-          <input type="email" placeholder="YOUR EMAIL ADDRESS" required class="newsletter-input">
-          <button type="submit" class="newsletter-submit" aria-label="Submit Subscription">Subscribe</button>        </form>
+      <div class="footer-nav-columns">
+        <div class="footer-nav-col">
+          <button type="button" class="footer-col-title" onclick="toggleFooterCol(this)" aria-expanded="false">
+            Explore
+            <svg class="footer-col-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <ul class="footer-links">
+            <li><a href="/#intro">About</a></li>
+            <li><a href="/krem">Krem</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <button type="button" class="footer-col-title" onclick="toggleFooterCol(this)" aria-expanded="false">
+            Social
+            <svg class="footer-col-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com/bwasondous" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@bwasondous" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="https://www.youtube.com/@bwasondous" target="_blank" rel="noopener">YouTube</a></li>
+          </ul>
+        </div>
       </div>
 
     </div>
 
-    <!-- Mobile only logo -->
-    <div class="footer-bottom">
-      <div class="logo">
-        Bwason Dous<span class="tm-logo">™</span>
+    <div class="footer-bottom-strip">
+      <p class="footer-copyright">Bwason Dous © 2026</p>
+      <div class="footer-legal-links">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-use">Terms of Use</a>
       </div>
     </div>
 

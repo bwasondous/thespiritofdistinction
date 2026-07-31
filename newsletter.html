@@ -4,35 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="/favicon.png">
-  <title>Concierge — Bwason Dous</title>
-  <meta name="description" content="Contact Bwason Dous — For press, distribution, and bespoke requests. Reach our concierge team directly.">
+  <title>Newsletter — Bwason Dous</title>
+  <meta name="description" content="Join the Bwason Dous newsletter — be the first to know when Krem becomes available, plus invitations to private Dous events.">
 
   <!-- SEO -->
   <meta name="keywords" content="Haitian Kremas, Krem, Premium Spirits, The Best Cream Liqueur, Haitian Spirits, Caribbean Spirits, Bwason Dous, Bwason, Dous, Premium Rum, Haitian Liqueur, Liquid Gold, Cream Liqueur">
   <meta name="author" content="Bwason Dous">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://bwasondous.com/concierge">
+  <link rel="canonical" href="https://bwasondous.com/newsletter">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Concierge — Bwason Dous">
-  <meta property="og:description" content="For press, distribution, and bespoke requests. Reach our concierge team directly.">
+  <meta property="og:title" content="Newsletter — Bwason Dous">
+  <meta property="og:description" content="Be the first to know when Krem becomes available, plus invitations to private Dous events.">
   <meta property="og:image" content="https://bwasondous.com/images/crest.png">
-  <meta property="og:url" content="https://bwasondous.com/concierge">
+  <meta property="og:url" content="https://bwasondous.com/newsletter">
   <meta property="og:type" content="website">
 
   <!-- Twitter/X Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Concierge — Bwason Dous">
-  <meta name="twitter:description" content="For press, distribution, and bespoke requests. Reach our concierge team directly.">
+  <meta name="twitter:title" content="Newsletter — Bwason Dous">
+  <meta name="twitter:description" content="Be the first to know when Krem becomes available, plus invitations to private Dous events.">
   <meta name="twitter:image" content="https://bwasondous.com/images/crest.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cinzel:wght@400;500&family=Jost:wght@200;300;400&family=Pinyon+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="concierge.css">
 </head>
-<body class="concierge-page">
+<body class="newsletter-page">
 
 <div id="cursor"></div>
 <div id="cursorRing"></div>
@@ -68,38 +67,84 @@
   </div>
 </nav>
 
-<main class="concierge-main">
+<main class="newsletter-main">
 
-  <header class="concierge-header reveal">
-    <p class="concierge-eyebrow">Inquiries</p>
-    <h1 class="concierge-title">Concierge</h1>
+  <header class="newsletter-page-header reveal">
+    <p class="newsletter-page-eyebrow">Newsletter</p>
+    <h1 class="newsletter-page-title">Keep in Touch</h1>
+    <p class="newsletter-page-sub">Sign up for our newsletter to hear about Krem's release, new additions to our portfolio, and invitations to private Dous events.</p>
   </header>
 
-  <div class="concierge-body reveal" style="transition-delay: 0.1s;">
-    <p class="concierge-intro">
-      Whether you're looking to feature Bwason Dous on your cocktail menu, exploring distribution, or reaching out from the press, we would love to hear from you. Please share your details in the form below.</p>
-    <p class="concierge-intro">
-      <br/>
-      You can also reach our concierge team directly at <a href="mailto:contact@bwasondous.com" class="concierge-link">hello@bwasondous.com</a>.
-    </p>
+  <div class="newsletter-form-wrap reveal" style="transition-delay: 0.1s;">
 
-    <form class="concierge-form" onsubmit="handleConcierge(event)">
-      <div class="concierge-row">
-        <div class="concierge-field">
-          <input class="concierge-input" type="text" id="c-name" name="name" placeholder="FULL NAME" required>
+    <p class="newsletter-required-note">*All fields are required</p>
+
+    <form id="newsletter-form" onsubmit="handleNewsletterSignup(event)">
+
+      <h2 class="newsletter-group-label">About You</h2>
+
+      <div class="newsletter-field">
+        <label class="newsletter-field-label" for="n-email">Email Address*</label>
+        <input type="email" id="n-email" name="email" placeholder="Email address" required>
+      </div>
+
+      <div class="newsletter-row">
+        <div class="newsletter-field">
+          <label class="newsletter-field-label" for="n-first">First Name*</label>
+          <input type="text" id="n-first" name="firstName" placeholder="First name" required>
         </div>
-        <div class="concierge-field">
-          <input class="concierge-input" type="email" id="c-email" name="email" placeholder="EMAIL ADDRESS" required>
+        <div class="newsletter-field">
+          <label class="newsletter-field-label" for="n-last">Last Name*</label>
+          <input type="text" id="n-last" name="lastName" placeholder="Last name" required>
         </div>
       </div>
-      <div class="concierge-field">
-        <input class="concierge-input" type="text" id="c-subject" name="subject" placeholder="SUBJECT">
+
+      <h2 class="newsletter-group-label">Birthdate*</h2>
+      <div class="newsletter-row-3">
+        <div class="newsletter-field">
+          <label class="newsletter-field-label" for="n-dd">Day</label>
+          <input type="text" inputmode="numeric" maxlength="2" id="n-dd" name="birthDay" placeholder="DD" required>
+        </div>
+        <div class="newsletter-field">
+          <label class="newsletter-field-label" for="n-mm">Month</label>
+          <input type="text" inputmode="numeric" maxlength="2" id="n-mm" name="birthMonth" placeholder="MM" required>
+        </div>
+        <div class="newsletter-field">
+          <label class="newsletter-field-label" for="n-yyyy">Year</label>
+          <input type="text" inputmode="numeric" maxlength="4" id="n-yyyy" name="birthYear" placeholder="YYYY" required>
+        </div>
       </div>
-      <div class="concierge-field">
-        <textarea class="concierge-input concierge-textarea" id="c-message" name="message" placeholder="MESSAGE" rows="5" required></textarea>
+
+      <h2 class="newsletter-group-label">Location</h2>
+      <div class="newsletter-row">
+        <div class="newsletter-field">
+          <label class="newsletter-field-label" for="n-country">Country/Region*</label>
+          <select id="n-country" name="country" required>
+            <option value="" selected disabled>- Select -</option>
+            <option value="US">United States</option>
+            <option value="CA">Canada</option>
+            <option value="HT">Haiti</option>
+            <option value="FR">France</option>
+            <option value="GB">United Kingdom</option>
+            <option value="OTHER">Other</option>
+          </select>
+        </div>
+        <div class="newsletter-field">
+          <label class="newsletter-field-label" for="n-zip">Zipcode*</label>
+          <input type="text" id="n-zip" name="zipcode" placeholder="Zipcode" required>
+        </div>
       </div>
-      <button class="concierge-submit" type="submit">SUBMIT</button>
-      <p class="concierge-confirm" id="concierge-confirm">Your message has been received. We will be in touch within 1-2 business days. Thank you.</p>
+
+      <div class="newsletter-consent">
+        <input type="checkbox" id="n-consent" name="consent" required>
+        <label for="n-consent">
+          By checking this box and clicking "Submit" I agree to receive email and other marketing communications from Bwason Dous. I understand that information collected will be used as described in our <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms-of-use">Terms of Use</a>.
+        </label>
+      </div>
+
+      <button type="submit" class="newsletter-submit-btn">Submit</button>
+
+      <p class="newsletter-confirm-msg" id="newsletter-confirm">You're on the list. Welcome to Bwason Dous — we'll be in touch soon.</p>
     </form>
   </div>
 
@@ -176,5 +221,18 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+  function handleNewsletterSignup(event) {
+    event.preventDefault();
+    const form = document.getElementById('newsletter-form');
+    const confirm = document.getElementById('newsletter-confirm');
+    [...form.children].forEach(child => {
+      if (!child.classList.contains('newsletter-confirm-msg')) {
+        child.style.display = 'none';
+      }
+    });
+    confirm.style.display = 'block';
+  }
+</script>
 </body>
 </html>

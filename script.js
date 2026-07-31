@@ -126,3 +126,11 @@ function toggleMobileMenu() {
     }
   }
 }
+
+// Footer accordion (Explore / Social) — mobile only, no-op visually on desktop
+function toggleFooterCol(btn) {
+  const col = btn.closest('.footer-nav-col');
+  if (!col) return;
+  const isOpen = col.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
