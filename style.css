@@ -1922,16 +1922,19 @@ background-color: var(--cream);
  
 .welcome-actions {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
   justify-content: center;
-  flex-wrap: wrap;
   opacity: 0;
   transform: translateY(14px);
   animation: fadeUp 0.9s ease forwards 1.05s;
 }
  
 .welcome-btn-primary {
-  display: inline-block;
+  display: block;
+  width: 100%;
+  max-width: 280px;
   font-family: var(--font-display);
   font-size: 13px;
   letter-spacing: 0.3em;
@@ -1946,6 +1949,17 @@ background-color: var(--cream);
 }
 .welcome-btn-primary:hover {
   background: var(--gold-light);
+}
+
+/* Shows only on mobile — hidden on desktop by default */
+.welcome-btn-mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .welcome-btn-mobile-only {
+    display: block;
+  }
 }
  
 /* ── ANIMATIONS ── */
