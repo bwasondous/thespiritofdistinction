@@ -848,6 +848,11 @@ footer {
   transition: transform 0.3s ease;
 }
 
+/* Store Locator link — mobile-only, sits above the Explore/Social columns in the footer */
+.footer-mobile-link {
+  display: none;
+}
+
 .footer-links {
   list-style: none;
   text-align: left;
@@ -1640,6 +1645,22 @@ background-color: var(--cream);
   .footer-col-title,
   .footer-links {
     text-align: center;
+  }
+
+  .footer-mobile-link {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+  }
+
+  .footer-mobile-link:hover {
+    color: var(--gold);
   }
 
   .footer-col-title {
