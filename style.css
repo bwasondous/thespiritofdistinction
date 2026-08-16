@@ -13,7 +13,7 @@
   --font-display: 'Cinzel', serif;
   --font-serif: 'Cormorant Garamond', serif;
   --font-body: 'Jost', sans-serif;
-  --font-script: 'Pinyon Script', cursive;
+  --font-script: 'Noto Serif Ethiopic', serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -62,14 +62,15 @@ body {
   text-transform: uppercase;
 }
 
-/* Updated with Pinyon Script */
+/* Updated with Noto Serif Ethiopic */
 .age-gate-title {
   font-family: var(--font-script);
   font-size: clamp(3.5rem, 8vw, 5rem);
   font-weight: 400;
   color: var(--gold);
   line-height: 1.1;
-  margin-bottom: 0.5rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
 }
 
 .age-gate-subtitle {
@@ -942,12 +943,13 @@ footer {
 }
 
 .logo {
-  font-family: 'Pinyon Script', cursive !important;
+  font-family: 'Noto Serif Ethiopic', serif !important;
   color: #c5a059 !important;
   font-size: 48px;
   text-align: center;
   line-height: 1.2;
   display: block;
+  text-transform: uppercase;
 }
 
 .logo .tm-logo {
@@ -1510,6 +1512,17 @@ background-color: var(--cream);
   /* ── HERO ── */
   #hero {
     padding-bottom: 6vh;
+  }
+}
+
+@media (min-width: 769px) {
+  .age-gate-inner {
+    max-width: 700px;
+  }
+
+  .age-gate-title {
+    font-size: clamp(3rem, 5.5vw, 4.5rem);
+    white-space: nowrap;
   }
 }
 
