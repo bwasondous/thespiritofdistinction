@@ -1541,6 +1541,11 @@ background-color: var(--cream);
     letter-spacing: 0.04em;
   }
 
+  .age-gate-title {
+    font-size: clamp(2.2rem, 11.5vw, 3.1rem);
+    white-space: nowrap;
+  }
+
   .age-gate-subtitle {
     font-size: 13px;
   }
