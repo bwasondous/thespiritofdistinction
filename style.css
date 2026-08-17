@@ -1542,7 +1542,7 @@ background-color: var(--cream);
   }
 
   .age-gate-title {
-    font-size: clamp(2.2rem, 11.5vw, 3.1rem);
+    font-size: clamp(1.7rem, 9vw, 2.35rem);
     white-space: nowrap;
   }
 
