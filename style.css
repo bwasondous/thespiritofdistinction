@@ -527,6 +527,26 @@ section { position: relative; }
   display: block;
 }
 
+/* ── KREM FEATURE IMAGE — MOBILE ──
+   A 16:9 frame inside a padded column collapses to a thin strip on a phone.
+   Break it edge-to-edge and crop to a taller ratio so it reads as a
+   full-bleed editorial image instead of a small inset. */
+@media (max-width: 768px) {
+  .krem-feature-image {
+    padding: 4rem 0 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);   /* escape .krem-inner's side padding */
+  }
+
+  .krem-feature-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;              /* portrait crop for phones */
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
 .krem-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -1595,7 +1615,7 @@ background-color: var(--cream);
 
   /* ── KREM GRID ── */
   #krem {
-    padding: 11rem 0;
+    padding: 11rem 0 5rem;   /* less dead cream under the feature image */
   }
 
   .krem-inner {
