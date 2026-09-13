@@ -522,29 +522,10 @@ section { position: relative; }
 
 .krem-feature-image img {
   width: 100%;
-  height: auto;          /* let the image keep its own aspect ratio */
-  object-fit: contain;   /* never crop the bottle out of frame */
+  height: 60vh;
+  object-fit: cover;
+  object-position: center;
   display: block;
-}
-
-/* ── KREM FEATURE IMAGE — MOBILE ──
-   A 16:9 frame inside a padded column collapses to a thin strip on a phone.
-   Break it edge-to-edge and crop to a taller ratio so it reads as a
-   full-bleed editorial image instead of a small inset. */
-@media (max-width: 768px) {
-  .krem-feature-image {
-    padding: 4rem 0 0;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);   /* escape .krem-inner's side padding */
-  }
-
-  .krem-feature-image img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 5;              /* portrait crop for phones */
-    object-fit: cover;
-    object-position: center;
-  }
 }
 
 .krem-inner {
@@ -1615,7 +1596,7 @@ background-color: var(--cream);
 
   /* ── KREM GRID ── */
   #krem {
-    padding: 11rem 0 5rem;   /* less dead cream under the feature image */
+    padding: 11rem 0;
   }
 
   .krem-inner {
@@ -2324,7 +2305,7 @@ background-color: var(--cream);
   line-height: 1.9;
   color: rgba(255, 255, 255, 0.65);
   max-width: 480px;
-  margin: 0 auto 2.5rem;
+  margin: 10rem auto 2.5rem;
 }
 
 .coming-soon-btn {
