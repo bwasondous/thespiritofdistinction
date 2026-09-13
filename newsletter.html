@@ -80,6 +80,11 @@
 
     <form id="newsletter-form" onsubmit="handleNewsletterSignup(event)">
 
+      <input type="hidden" name="access_key" value="13935886-035b-4934-bc83-98e60797887c">
+      <input type="hidden" name="subject" value="New Newsletter Signup — bwasondous.com">
+      <input type="hidden" name="from_name" value="Bwason Dous Website">
+      <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
+
       <h2 class="newsletter-group-label">About You</h2>
 
       <div class="newsletter-field">
@@ -224,16 +229,50 @@
 
 <script src="script.js"></script>
 <script>
+  function showFormError(form, message) {
+    let box = form.querySelector('.form-error-msg');
+    if (!box) {
+      box = document.createElement('p');
+      box.className = 'form-error-msg';
+      box.style.cssText = 'margin-top:1.2rem;font-size:13px;line-height:1.7;color:#C98B8B;';
+      form.appendChild(box);
+    }
+    box.textContent = message;
+    box.style.display = 'block';
+  }
+
   function handleNewsletterSignup(event) {
     event.preventDefault();
     const form = document.getElementById('newsletter-form');
     const confirm = document.getElementById('newsletter-confirm');
-    [...form.children].forEach(child => {
-      if (!child.classList.contains('newsletter-confirm-msg')) {
-        child.style.display = 'none';
-      }
-    });
-    confirm.style.display = 'block';
+    const btn = form.querySelector('.newsletter-submit-btn');
+    const label = btn.textContent;
+
+    const existingError = form.querySelector('.form-error-msg');
+    if (existingError) existingError.style.display = 'none';
+
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(form)
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (!result.success) throw new Error(result.message || 'Submission failed');
+        [...form.children].forEach(child => {
+          if (!child.classList.contains('newsletter-confirm-msg')) {
+            child.style.display = 'none';
+          }
+        });
+        confirm.style.display = 'block';
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.textContent = label;
+        showFormError(form, 'We could not submit your details just now. Please try again, or email contact@bwasondous.com.');
+      });
   }
 </script>
 </body>
