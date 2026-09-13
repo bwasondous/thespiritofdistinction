@@ -2297,7 +2297,7 @@ background-color: var(--cream);
 
 /* ── COMING SOON (Store Locator) ── */
 .coming-soon-main {
-  padding-bottom: 10rem;
+  padding-bottom: 3.75rem;
 }
 
 .terms-intro-sub {
@@ -2305,7 +2305,7 @@ background-color: var(--cream);
   line-height: 1.9;
   color: rgba(255, 255, 255, 0.65);
   max-width: 480px;
-  margin: 10rem auto 2.5rem;
+  margin: 4.5rem auto 2.5rem;
 }
 
 .coming-soon-btn {
