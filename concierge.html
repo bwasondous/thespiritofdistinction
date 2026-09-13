@@ -83,6 +83,10 @@
     </p>
 
     <form class="concierge-form" onsubmit="handleConcierge(event)">
+      <input type="hidden" name="access_key" value="13935886-035b-4934-bc83-98e60797887c">
+      <input type="hidden" name="subject" value="New Concierge Inquiry — bwasondous.com">
+      <input type="hidden" name="from_name" value="Bwason Dous Website">
+      <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
       <div class="concierge-row">
         <div class="concierge-field">
           <input class="concierge-input" type="text" id="c-name" name="name" placeholder="FULL NAME" required>
@@ -178,5 +182,50 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+  function showFormError(form, message) {
+    let box = form.querySelector('.form-error-msg');
+    if (!box) {
+      box = document.createElement('p');
+      box.className = 'form-error-msg';
+      box.style.cssText = 'margin-top:1.2rem;font-size:13px;line-height:1.7;color:#C98B8B;';
+      form.appendChild(box);
+    }
+    box.textContent = message;
+    box.style.display = 'block';
+  }
+
+  function handleConcierge(event) {
+    event.preventDefault();
+    const form = event.target;
+    const confirm = document.getElementById('concierge-confirm');
+    const btn = form.querySelector('.concierge-submit');
+    const label = btn.textContent;
+
+    const existingError = form.querySelector('.form-error-msg');
+    if (existingError) existingError.style.display = 'none';
+
+    btn.disabled = true;
+    btn.textContent = 'SENDING...';
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(form)
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (!result.success) throw new Error(result.message || 'Submission failed');
+        [...form.children].forEach(child => {
+          if (child !== confirm) child.style.display = 'none';
+        });
+        confirm.style.display = 'block';
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.textContent = label;
+        showFormError(form, 'We could not send your message just now. Please try again, or email hello@bwasondous.com.');
+      });
+  }
+</script>
 </body>
 </html>
