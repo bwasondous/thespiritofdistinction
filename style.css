@@ -2513,14 +2513,10 @@ background-color: var(--cream);
    ========================================================================== */
 
 .newsletter-page {
-  background: #000000;
+  background: linear-gradient(#000000, #000000) no-repeat var(--espresso);
   color: #FFFFFF;
   font-family: var(--font-body);
   font-weight: 300;
-}
-
-html:has(> body.newsletter-page) {
-  background: var(--espresso);
 }
 
 .newsletter-page #main-nav {
