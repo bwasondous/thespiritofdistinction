@@ -2530,6 +2530,17 @@ background-color: var(--cream);
   body.newsletter-page #main-nav {
     background: #000000;
   }
+
+  body.newsletter-page #main-nav::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));
+    pointer-events: none;
+  }
 }
 
 .newsletter-main {
@@ -2751,7 +2762,7 @@ background-color: var(--cream);
 /* ── RESPONSIVE ── */
 @media (max-width: 600px) {
   .newsletter-page-header {
-    padding: 130px 0 2.5rem;
+    padding: 170px 0 2.5rem;
   }
 
   .newsletter-row,
