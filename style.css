@@ -2965,27 +2965,33 @@ background-color: var(--cream);
     padding: 2.25rem 1.75rem;
   }
 }
-/* ── NAV: KREM DROPDOWN (desktop hover reveals Recipes) ── */
+/* ── NAV: KREM DROPDOWN (desktop hover reveals Recipes — text only) ── */
 .nav-item-dropdown {
   position: relative;
 }
 
-.nav-dropdown {
+/* Invisible hover bridge: keeps .nav-item-dropdown "hovered" while the
+   pointer travels from the Krem link down to the Recipes text below it,
+   so the dropdown never disappears before the mouse arrives. */
+.nav-item-dropdown::after {
+  content: "";
   position: absolute;
   top: 100%;
+  left: -1rem;
+  right: -1rem;
+  height: 18px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 18px);
   left: 50%;
-  transform: translateX(-50%) translateY(6px);
+  transform: translateX(-50%);
   list-style: none;
-  min-width: 150px;
-  padding: 0.75rem 0;
-  margin-top: 0.5rem;
-  background: rgba(26, 17, 8, 0.97);
-  border: 1px solid rgba(184, 146, 74, 0.3);
-  text-align: center;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
   z-index: 1001;
 }
 
@@ -2994,7 +3000,6 @@ background-color: var(--cream);
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
 }
 
 .nav-dropdown li {
@@ -3003,10 +3008,10 @@ background-color: var(--cream);
 
 .nav-dropdown a {
   display: block;
-  padding: 0.6rem 1.5rem;
+  padding: 0.4rem 0;
   font-family: var(--font-display);
-  font-size: 12px;
-  letter-spacing: 0.25em;
+  font-size: 13px;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(245, 240, 232, 0.8);
   text-decoration: none;
