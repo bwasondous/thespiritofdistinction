@@ -46,7 +46,12 @@
 
   <ul class="nav-links">
     <li><a href="/#intro">About</a></li>
-    <li><a href="/krem">Krem</a></li>
+    <li class="nav-item-dropdown">
+      <a href="/krem">Krem</a>
+      <ul class="nav-dropdown">
+        <li><a href="/recipes">Recipes</a></li>
+      </ul>
+    </li>
   </ul>
 
   <a href="/" class="nav-logo desktop-logo-only">
@@ -63,6 +68,7 @@
     <ul class="mobile-nav-links">
       <li><a href="/" onclick="toggleMobileMenu()">Home</a></li>
       <li><a href="/krem" onclick="toggleMobileMenu()">Krem</a></li>
+      <li><a href="/recipes" onclick="toggleMobileMenu()">Recipes</a></li>
     </ul>
   </div>
 </nav>
