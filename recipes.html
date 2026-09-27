@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>Recipes — Bwason Dous</title>
+  <meta name="description" content="Recipes crafted with Krem — espresso martinis, spiked hot chocolate, eggnog, and more from Bwason Dous.">
+
+  <!-- SEO -->
+  <meta name="keywords" content="Haitian Kremas, Krem, Premium Spirits, The Best Cream Liqueur, Haitian Spirits, Caribbean Spirits, Bwason Dous, Bwason, Dous, Premium Rum, Haitian Liqueur, Liquid Gold, Cream Liqueur, Krem Cocktail Recipes, Krem Espresso Martini, Spiked Eggnog, Spiked Hot Chocolate">
+  <meta name="author" content="Bwason Dous">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bwasondous.com/recipes">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Recipes — Bwason Dous">
+  <meta property="og:description" content="Recipes crafted with Krem — espresso martinis, spiked hot chocolate, eggnog, and more.">
+  <meta property="og:image" content="https://bwasondous.com/images/crest.png">
+  <meta property="og:url" content="https://bwasondous.com/recipes">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Recipes — Bwason Dous">
+  <meta name="twitter:description" content="Recipes crafted with Krem — espresso martinis, spiked hot chocolate, eggnog, and more.">
+  <meta name="twitter:image" content="https://bwasondous.com/images/crest.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cinzel:wght@400;500&family=Jost:wght@200;300;400&family=Noto+Serif+Ethiopic:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="recipes-page">
+
+<div id="cursor"></div>
+<div id="cursorRing"></div>
+
+<nav id="main-nav" class="scrolled">
+  <button class="mobile-menu-toggle" aria-label="Toggle navigation" onclick="toggleMobileMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="/#intro">About</a></li>
+    <li><a href="/krem">Krem</a></li>
+  </ul>
+
+  <a href="/" class="nav-logo desktop-logo-only">
+    <img src="images/bwason-dous-logo.png" alt="Bwason Dous Logo">
+  </a>
+
+  <a href="/" class="nav-logo mobile-logo-only">
+    <img src="images/bwason-dous-logo.png" alt="Bwason Dous Logo Mobile">
+  </a>
+
+  <a href="/store-locator" class="nav-reserve">Store Locator</a>
+
+  <div class="mobile-menu-drawer" id="mobileDrawer">
+    <ul class="mobile-nav-links">
+      <li><a href="/" onclick="toggleMobileMenu()">Home</a></li>
+      <li><a href="/krem" onclick="toggleMobileMenu()">Krem</a></li>
+      <li><a href="/recipes" onclick="toggleMobileMenu()">Recipes</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="recipes-main">
+
+  <header class="recipes-header reveal">
+    <p class="recipes-eyebrow">Recipes</p>
+    <h1 class="recipes-title">Crafted With Krem</h1>
+    <p class="recipes-intro">
+      From late-night espresso martinis to holiday eggnog, Krem's smooth coconut, cream, and spice profile was made to be poured, stirred, and drizzled. A few ways to bring it to your table.
+    </p>
+  </header>
+
+  <div class="recipes-grid">
+
+    <!-- 01 — Krem Espresso Martini -->
+    <article class="recipe-card reveal">
+      <div class="recipe-card-top">
+        <span class="recipe-tag">Cocktail</span>
+        <span class="recipe-serves">Serves 1</span>
+      </div>
+      <h2 class="recipe-title">Krem Espresso Martini</h2>
+      <p class="recipe-desc">A modern classic, softened by Krem's coconut cream in place of the usual sugar syrup.</p>
+
+      <h3 class="recipe-section-label">Ingredients</h3>
+      <ul class="recipe-list">
+        <li>1½ oz Krem</li>
+        <li>1½ freshly brewed espresso, cooled</li>
+        <li>1 oz vodka</li>
+        <li>¾ oz coffee liqueur</li>
+        <li>Ice</li>
+        <li>3 coffee beans, for garnish</li>
+      </ul>
+
+      <h3 class="recipe-section-label">Method</h3>
+      <ol class="recipe-steps">
+        <li>Combine all ingredients in a cocktail shaker filled with ice.</li>
+        <li>Shake hard for 15 seconds, until well chilled and frothy.</li>
+        <li>Double strain into a chilled coupe glass.</li>
+        <li>Garnish with three coffee beans.</li>
+      </ol>
+    </article>
+
+    <!-- 02 — Vanilla Ice Cream with Krem Drizzle -->
+    <article class="recipe-card reveal" style="transition-delay:0.05s;">
+      <div class="recipe-card-top">
+        <span class="recipe-tag">Dessert</span>
+        <span class="recipe-serves">Serves 1</span>
+      </div>
+      <h2 class="recipe-title">Vanilla Ice Cream, Krem Drizzle</h2>
+      <p class="recipe-desc">The simplest way to taste Krem on its own — poured warm over cold vanilla bean.</p>
+
+      <h3 class="recipe-section-label">Ingredients</h3>
+      <ul class="recipe-list">
+        <li>2 scoops vanilla bean ice cream</li>
+        <li>1½ oz Krem</li>
+        <li>Toasted coconut flakes</li>
+        <li>Pinch of ground cinnamon</li>
+      </ul>
+
+      <h3 class="recipe-section-label">Method</h3>
+      <ol class="recipe-steps">
+        <li>Scoop the ice cream into a chilled bowl or coupe glass.</li>
+        <li>Pour Krem (chilled) generously over the ice cream.</li>
+        <li>Finish with toasted coconut and a dusting of cinnamon. Serve immediately.</li>
+      </ol>
+    </article>
+
+    <!-- 03 — Spiked Hot Chocolate -->
+    <article class="recipe-card reveal" style="transition-delay:0.1s;">
+      <div class="recipe-card-top">
+        <span class="recipe-tag">Warm &amp; Spiked</span>
+        <span class="recipe-serves">Serves 1</span>
+      </div>
+      <h2 class="recipe-title">Spiked Hot Chocolate</h2>
+      <p class="recipe-desc">A fireside pour — Krem's spice and cream deepen a classic hot chocolate.</p>
+
+      <h3 class="recipe-section-label">Ingredients</h3>
+      <ul class="recipe-list">
+        <li>8 oz hot chocolate, whole-milk based</li>
+        <li>2 ½ oz Krem</li>
+        <li>Whipped cream</li>
+        <li>Grated nutmeg</li>
+        <li>1 cinnamon stick</li>
+      </ul>
+
+      <h3 class="recipe-section-label">Method</h3>
+      <ol class="recipe-steps">
+        <li>Prepare the hot chocolate as usual and let it cool slightly.</li>
+        <li>Stir in the Krem off the heat.</li>
+        <li>Top with whipped cream and a grating of nutmeg.</li>
+        <li>Finish with a cinnamon stick for stirring.</li>
+      </ol>
+    </article>
+
+    <!-- 04 — Krem Eggnog -->
+    <article class="recipe-card reveal" style="transition-delay:0.15s;">
+      <div class="recipe-card-top">
+        <span class="recipe-tag">Holiday</span>
+        <span class="recipe-serves">Serves 4</span>
+      </div>
+      <h2 class="recipe-title">Krem Eggnog (Krem-nog)</h2>
+      <p class="recipe-desc">Holiday eggnog, reimagined with Krem's coconut cream and warm spice.</p>
+
+      <h3 class="recipe-section-label">Ingredients</h3>
+      <ul class="recipe-list">
+        <li>2 ½ cups prepared eggnog</li>
+        <li>6 oz Krem</li>
+        <li>1 oz dark rum <em>(optional)</em></li>
+        <li>Freshly grated nutmeg, to finish</li>
+      </ul>
+
+      <h3 class="recipe-section-label">Method</h3>
+      <ol class="recipe-steps">
+        <li>Combine the eggnog and Krem in a pitcher and stir to combine.</li>
+        <li>Add the dark rum, if using.</li>
+        <li>Chill for 30 minutes to let the flavors meld.</li>
+        <li>Serve over ice or in small glasses, topped with nutmeg.</li>
+      </ol>
+    </article>
+
+    <!-- 05 — Krem Piña Colada -->
+    <article class="recipe-card reveal" style="transition-delay:0.2s;">
+      <div class="recipe-card-top">
+        <span class="recipe-tag">Cocktail</span>
+        <span class="recipe-serves">Serves 1</span>
+      </div>
+      <h2 class="recipe-title">Krem Piña Colada</h2>
+      <p class="recipe-desc">Krem stands in for half the cream, giving this island classic more depth.</p>
+
+      <h3 class="recipe-section-label">Ingredients</h3>
+      <ul class="recipe-list">
+        <li>1 oz Krem</li>
+        <li>1 oz white rum</li>
+        <li>2 oz pineapple juice</li>
+        <li>1 oz cream of coconut</li>
+        <li>1 cup ice</li>
+        <li>Pineapple wedge and cherry, for garnish</li>
+      </ul>
+
+      <h3 class="recipe-section-label">Method</h3>
+      <ol class="recipe-steps">
+        <li>Add all ingredients to a blender with the ice.</li>
+        <li>Blend until smooth and frosty.</li>
+        <li>Pour into a chilled glass.</li>
+        <li>Garnish with a pineapple wedge and cherry.</li>
+      </ol>
+    </article>
+
+    <!-- 06 — Krem Affogato -->
+    <article class="recipe-card reveal" style="transition-delay:0.25s;">
+      <div class="recipe-card-top">
+        <span class="recipe-tag">Dessert</span>
+        <span class="recipe-serves">Serves 1</span>
+      </div>
+      <h2 class="recipe-title">Krem Affogato</h2>
+      <p class="recipe-desc">Hot espresso, cold vanilla, and a finishing pour of Krem — ready in under a minute.</p>
+
+      <h3 class="recipe-section-label">Ingredients</h3>
+      <ul class="recipe-list">
+        <li>1 scoop vanilla ice cream</li>
+        <li>1 shot espresso, hot</li>
+        <li>1 oz Krem</li>
+      </ul>
+
+      <h3 class="recipe-section-label">Method</h3>
+      <ol class="recipe-steps">
+        <li>Place the scoop of ice cream in a small glass.</li>
+        <li>Pour the hot espresso directly over it.</li>
+        <li>Finish with a pour of Krem.</li>
+        <li>Serve immediately with a small spoon.</li>
+      </ol>
+    </article>
+
+  </div>
+
+  <p class="recipes-footnote reveal">Please drink responsibly. Krem is intended for guests 21 and older.</p>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="logo desktop-footer-logo">
+          Bwason Dous
+        </div>
+
+        <div class="footer-action-group">
+          <a href="/newsletter" class="footer-action-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="5" width="18" height="14" rx="1"></rect>
+              <path d="M3 6l9 7 9-7"></path>
+            </svg>
+            Newsletter
+          </a>
+          <a href="/concierge" class="footer-action-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 19v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path>
+              <circle cx="10" cy="7" r="3"></circle>
+              <path d="M16 3.5a3 3 0 0 1 0 7"></path>
+            </svg>
+            Concierge
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-nav-columns">
+        <a href="/store-locator" class="footer-mobile-link">Store Locator</a>
+        <div class="footer-nav-col">
+          <button type="button" class="footer-col-title" onclick="toggleFooterCol(this)" aria-expanded="false">
+            Explore
+            <svg class="footer-col-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <ul class="footer-links">
+            <li><a href="/#intro">About</a></li>
+            <li><a href="/krem">Krem</a></li>
+            <li><a href="/recipes">Recipes</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <button type="button" class="footer-col-title" onclick="toggleFooterCol(this)" aria-expanded="false">
+            Social
+            <svg class="footer-col-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com/bwasondous" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@bwasondous" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="https://www.youtube.com/@bwasondous" target="_blank" rel="noopener">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer-drink-responsibly">Please Drink Responsibly</p>
+
+    </div>
+
+    <div class="footer-bottom-strip">
+      <p class="footer-copyright">Bwason Dous © 2026</p>
+      <div class="footer-legal-links">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-use">Terms of Use</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
