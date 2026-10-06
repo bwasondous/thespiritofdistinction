@@ -1911,240 +1911,256 @@ background-color: var(--cream);
 }
 
 /* ── WELCOME PAGE HERO ── */
+
+/* ── Hero container ── */
 .welcome-hero {
-  min-height: 100vh;
   position: relative;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;   /* fallback */
+  min-height: 100svh;  /* iOS Safari: don't hide buttons under the toolbar */
+  overflow: hidden;
+  background: #000;
 }
- 
-.welcome-hero-image {
+
+/* ── Background image ── */
+.welcome-hero .welcome-hero-image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
 }
- 
-.welcome-hero-image img {
+
+.welcome-hero .welcome-hero-image img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center middle;
 }
- 
-.welcome-hero-overlay {
+
+/* ── Dark gradient over the image ── */
+.welcome-hero .welcome-hero-overlay {
   position: absolute;
   inset: 0;
+  z-index: 2;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.9) 0%,
-    rgba(0,0,0,0.6) 24%,
-    rgba(0,0,0,0.12) 50%,
-    rgba(0,0,0,0.12) 100%
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.6) 24%,
+    rgba(0, 0, 0, 0.12) 50%,
+    rgba(0, 0, 0, 0.12) 100%
   );
-  z-index: 2;
 }
- 
-.welcome-hero-content {
+
+/* ── Text block, pinned to the bottom ── */
+.welcome-hero .welcome-hero-content {
   position: absolute;
   inset: 0;
   z-index: 3;
+  box-sizing: border-box;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   text-align: center;
   padding: 0 3rem 2.5rem;
-  width: 100%;
-  box-sizing: border-box;
 }
- 
-.welcome-eyebrow {
-  font-family: var(--font-display);
-  font-size: 13px;
-  letter-spacing: 0.45em;
-  color: var(--gold);
-  text-transform: uppercase;
+
+/* ── Eyebrow ── */
+.welcome-hero .welcome-eyebrow {
   position: absolute;
   top: 150px;
   left: 0;
   right: 0;
   margin: 0;
+  font-family: var(--font-display, 'Cinzel', serif);
+  font-size: 13px;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--gold, #B8924A);
   opacity: 0;
   transform: translateY(16px);
-  animation: fadeUp 0.9s ease forwards 0.3s;
+  animation: welcomeFadeUp 0.9s ease forwards 0.3s;
 }
- 
-.welcome-headline {
-  font-family: var(--font-serif);
+
+/* ── Headline ── */
+.welcome-hero .welcome-headline {
+  max-width: 900px;
+  margin: 0 0 1.1rem;
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
   font-size: clamp(1.5rem, 3vw, 2.6rem);
   font-weight: 300;
   font-style: italic;
-  text-align: center;
-  color: var(--cream);
   line-height: 1.2;
   letter-spacing: 0.02em;
-  margin-bottom: 1.1rem;
-  max-width: 900px;
+  text-align: center;
+  color: var(--cream, #F5EFE6);
   white-space: normal;
   word-break: break-word;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeUp 1s ease forwards 0.5s;
+  animation: welcomeFadeUp 1s ease forwards 0.5s;
 }
 
-/* Desktop: headline on one line to save vertical room */
-@media (min-width: 769px) {
-  .welcome-headline br {
-    display: none;
-  }
-}
- 
-.welcome-rule {
+/* ── Gold rule ── */
+.welcome-hero .welcome-rule {
   width: 48px;
   height: 1px;
-  background: var(--gold);
   margin: 0 auto 1.2rem;
+  background: var(--gold, #B8924A);
   opacity: 0;
-  animation: fadeIn 0.8s ease forwards 0.75s;
+  animation: welcomeFadeIn 0.8s ease forwards 0.75s;
 }
- 
-.welcome-subtext {
-  font-family: var(--font-body);
+
+/* ── Subtext ── */
+.welcome-hero .welcome-subtext {
+  max-width: 760px;
+  margin: 0 0 1.8rem;
+  font-family: var(--font-body, 'Jost', sans-serif);
   font-size: 15px;
   font-weight: 300;
+  line-height: 1.9;
   letter-spacing: 0.06em;
   color: rgba(255, 255, 255, 0.81);
-  line-height: 1.9;
-  margin-bottom: 1.8rem;
-  max-width: 760px;
   opacity: 0;
   transform: translateY(14px);
-  animation: fadeUp 0.9s ease forwards 0.85s;
+  animation: welcomeFadeUp 0.9s ease forwards 0.85s;
 }
- 
-.welcome-actions {
+
+/* ── Buttons ── */
+.welcome-hero .welcome-actions {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
   justify-content: center;
+  gap: 1rem;
   opacity: 0;
   transform: translateY(14px);
-  animation: fadeUp 0.9s ease forwards 1.05s;
+  animation: welcomeFadeUp 0.9s ease forwards 1.05s;
 }
- 
-.welcome-btn-primary {
+
+.welcome-hero .welcome-btn-primary {
   display: block;
+  box-sizing: border-box;
   width: 100%;
   max-width: 280px;
-  font-family: var(--font-display);
+  padding: 1rem 2.4rem;
+  font-family: var(--font-display, 'Cinzel', serif);
   font-size: 13px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  text-decoration: none;
   text-align: center;
-  background: var(--gold);
-  color: var(--espresso);
-  padding: 1rem 2.4rem;
-  transition: background 0.3s ease;
+  text-decoration: none;
   white-space: nowrap;
-}
-.welcome-btn-primary:hover {
-  background: var(--gold-light);
+  background: var(--gold, #B8924A);
+  color: var(--espresso, #1A0F0A);
+  transition: background 0.3s ease;
 }
 
-/* Shows only on mobile — hidden on desktop by default */
-.welcome-btn-mobile-only {
+.welcome-hero .welcome-btn-primary:hover {
+  background: var(--gold-light, #D4B06A);
+}
+
+/* "Store Locator" button: mobile only (desktop has it in the nav) */
+.welcome-hero .welcome-btn-mobile-only {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .welcome-btn-mobile-only {
-    display: block;
-  }
+/* ── Animations (uniquely named so old stylesheets can't clash) ── */
+@keyframes welcomeFadeUp {
+  to { opacity: 1; transform: translateY(0); }
 }
- 
-/* ── ANIMATIONS ── */
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeIn {
+@keyframes welcomeFadeIn {
   to { opacity: 1; }
 }
- 
-/* ── MOBILE ── */
+
+/* ── Desktop: headline on one line ── */
+@media (min-width: 769px) {
+  .welcome-hero .welcome-headline br {
+    display: none;
+  }
+}
+
+/* ── Mobile ── */
 @media (max-width: 768px) {
-  .welcome-hero-content {
-    padding: 0 2rem 1.75rem;
-  }
- 
-  .welcome-headline {
-    font-size: clamp(1.4rem, 5.8vw, 2.2rem);
-    margin-bottom: 0.9rem;
-  }
- 
-  .welcome-subtext {
-    font-size: 14px;
-    letter-spacing: 0.04em;
-    font-weight: 300;
-
-line-height: 1.7;
-
-margin-bottom: 1.4rem;
-  }
- 
-  .welcome-actions {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-  }
- 
-  .welcome-btn-primary {
-    width: 100%;
-    max-width: 280px;
-    text-align: center;
+  .welcome-hero .welcome-btn-mobile-only {
     display: block;
-    margin: 0 auto;
-    padding: 0.85rem 2rem;
   }
 
-  .welcome-hero-image {
+  /* Image fills the top 78% and fades into black */
+  .welcome-hero .welcome-hero-image {
     height: 78%;
     -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
-    mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+            mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
   }
 
-  .welcome-hero-image img {
+  .welcome-hero .welcome-hero-image img {
     object-position: 62% center;
   }
 
-  .welcome-eyebrow {
+  .welcome-hero .welcome-hero-content {
+    padding: 0 2rem 1.75rem;
+  }
+
+  .welcome-hero .welcome-eyebrow {
     top: 110px;
   }
 
-  .welcome-rule {
+  .welcome-hero .welcome-headline {
+    font-size: clamp(1.4rem, 5.8vw, 2.2rem);
+    margin-bottom: 0.9rem;
+  }
+
+  .welcome-hero .welcome-rule {
     margin-bottom: 1rem;
   }
+
+  .welcome-hero .welcome-subtext {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+    margin-bottom: 1.4rem;
+  }
+
+  .welcome-hero .welcome-actions {
+    gap: 0.75rem;
+  }
+
+  .welcome-hero .welcome-btn-primary {
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 0.85rem 2rem;
+  }
 }
- 
+
+/* ── Small phones ── */
 @media (max-width: 480px) {
-  .welcome-hero-content {
+  .welcome-hero .welcome-hero-content {
     padding: 0 1.5rem 1.5rem;
   }
- 
-  .welcome-headline {
-    font-size: clamp(1.4rem, 5.8vw, 1.8rem);  }
- 
-  .welcome-subtext {
-    font-size: 14px;
+
+  .welcome-hero .welcome-headline {
+    font-size: clamp(1.4rem, 5.8vw, 1.8rem);
   }
 }
+
+/* ── Respect reduced-motion settings ── */
+@media (prefers-reduced-motion: reduce) {
+  .welcome-hero .welcome-eyebrow,
+  .welcome-hero .welcome-headline,
+  .welcome-hero .welcome-rule,
+  .welcome-hero .welcome-subtext,
+  .welcome-hero .welcome-actions {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* ==========================================================================
    TERMS OF USE PAGE
    ========================================================================== */
