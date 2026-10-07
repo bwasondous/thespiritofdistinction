@@ -1,15 +1,15 @@
-// --- Age Verification Gate with 10-Minute Expiry ---
+// --- Age Verification Gate with 30-Minute Expiry ---
 
 document.addEventListener("DOMContentLoaded", () => {
   const ageGate = document.getElementById('age-gate');
   if (!ageGate) return;
 
-  const TEN_MINUTES = 10 * 60 * 1000; // 10 minutes in milliseconds
+  const THIRTY_MINUTES = 30 * 60 * 1000; // 30 minutes in milliseconds
   const lastVerified = localStorage.getItem('ageVerifiedTime');
   const now = Date.now();
 
-  // If they verified less than 10 minutes ago, hide the gate immediately
-  if (lastVerified && (now - lastVerified < TEN_MINUTES)) {
+  // If they verified less than 30 minutes ago, hide the gate immediately
+  if (lastVerified && (now - lastVerified < THIRTY_MINUTES)) {
     ageGate.style.display = 'none'; 
     document.body.style.overflow = ''; // Allow scrolling
   } else {
