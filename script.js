@@ -134,3 +134,57 @@ function toggleFooterCol(btn) {
   const isOpen = col.classList.toggle('open');
   btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 }
+// --- Hide header on scroll down, bring it back on scroll up ---
+// Scrolling down: the header moves up with the page, so it feels like you are scrolling past it.
+// Scrolling up: the header slides smoothly back into view.
+(() => {
+  const header = document.getElementById('main-nav');
+  if (!header) return;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const SLIDE_IN = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
+  const UP_THRESHOLD = 4; // ignore tiny finger/trackpad jitters
+  let lastY = Math.max(window.scrollY, 0);
+  let offset = 0; // how far the header is pushed up, in px
+  let ticking = false;
+
+  // Extra 50px also hides the gradient/blur that extends below the bar
+  const hideDistance = () => header.offsetHeight + 50;
+
+  function apply(animate) {
+    header.style.transition = animate && !reduceMotion ? SLIDE_IN : 'none';
+    header.style.transform = offset ? `translate3d(0, ${-offset}px, 0)` : '';
+  }
+
+  function show() {
+    if (offset !== 0) { offset = 0; apply(true); }
+  }
+
+  function update() {
+    ticking = false;
+    const y = Math.max(window.scrollY, 0);
+    const dy = y - lastY;
+    lastY = y;
+
+    // Keep the header visible while the mobile menu is open
+    const drawer = document.getElementById('mobileDrawer');
+    if (drawer && drawer.classList.contains('open')) { show(); return; }
+
+    // Ignore the iOS bounce at the very bottom of the page
+    const atBottom = window.innerHeight + y >= document.documentElement.scrollHeight - 2;
+
+    if (dy > 0) {
+      const next = Math.min(hideDistance(), offset + dy);
+      if (next !== offset) { offset = next; apply(false); }
+    } else if (dy < -UP_THRESHOLD && !atBottom) {
+      show();
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+
+  // Bring the header back if someone tabs into it with the keyboard
+  header.addEventListener('focusin', show);
+})();
