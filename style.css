@@ -200,7 +200,7 @@ nav.scrolled {
 }
 
 .nav-logo img {
-  filter: brightness(0) invert(1) contrast(1.4);
+  filter: none;
 }
 
 /* Forces the right-side store-locator button to stick to the far right of its grid track */
@@ -995,11 +995,11 @@ footer {
 
 /* --- LOGO FIX --- */
 .nav-logo img {
-  height: 115px; /* Reduced 15% from 150px */
+  height: 107.81px; /* Increased 25% from 86.25px */
   width: auto;
   display: block;
-  /* This filter turns the black logo into a gold/cream color */
-  filter: brightness(0) invert(1) contrast(1.4);
+  /* No filter: show the crest in its true colors */
+  filter: none;
 }
 
 /* ── INTRO IMAGE STYLING ── */
@@ -1507,7 +1507,7 @@ background-color: var(--cream);
   }
   
   .nav-logo img {
-    height: 85px; /* Reduced 15% from 100px */
+    height: 79.69px; /* Increased 25% from 63.75px */
   }
 
   .nav-reserve {
@@ -1578,7 +1578,7 @@ background-color: var(--cream);
   }
 
   .nav-logo img {
-    height: 72px; /* Reduced 15% from 85px */
+    height: 67.5px; /* Increased 25% from 54px */
   }
 
 .concierge-main {
@@ -1827,7 +1827,7 @@ background-color: var(--cream);
   }
 
   .mobile-logo-only img {
-    height: 105px !important; /* Reduced 15% from 125px */
+    height: 98.44px !important; /* Increased 25% from 78.75px */
     width: auto;
     display: block;
   }
