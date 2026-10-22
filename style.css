@@ -995,7 +995,7 @@ footer {
 
 /* --- LOGO FIX --- */
 .nav-logo img {
-  height: 107.81px; /* Increased 25% from 86.25px */
+  height: 114.55px; /* Reduced 15% from 134.76px */
   width: auto;
   display: block;
   /* No filter: show the crest in its true colors */
@@ -1507,7 +1507,8 @@ background-color: var(--cream);
   }
   
   .nav-logo img {
-    height: 79.69px; /* Increased 25% from 63.75px */
+    height: 84.67px; /* Reduced 15% from 99.61px */
+    transform: translateY(2px); /* Nudged down to line up with the About/Krem links */
   }
 
   .nav-reserve {
@@ -1578,7 +1579,7 @@ background-color: var(--cream);
   }
 
   .nav-logo img {
-    height: 67.5px; /* Increased 25% from 54px */
+    height: 71.72px; /* Reduced 15% from 84.38px */
   }
 
 .concierge-main {
@@ -1827,7 +1828,8 @@ background-color: var(--cream);
   }
 
   .mobile-logo-only img {
-    height: 98.44px !important; /* Increased 25% from 78.75px */
+    height: 104.59px !important; /* Reduced 15% from 123.05px */
+    transform: translateY(6px); /* Nudged down to line up with the hamburger icon */
     width: auto;
     display: block;
   }
